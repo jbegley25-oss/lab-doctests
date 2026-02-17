@@ -40,6 +40,7 @@ def is_even(n):
     >>> type(is_even(0))
     <class 'bool'>
     '''
+    return n % 2 == 0
 
 
 def is_odd(n):
@@ -59,6 +60,7 @@ def is_odd(n):
     >>> type(is_odd(0))
     <class 'bool'>
     '''
+    return n % 2 == 1
 
 
 def absolute_value(n):
@@ -77,6 +79,7 @@ def absolute_value(n):
     >>> absolute_value(-5.5)
     5.5
     '''
+    return abs(n)
 
 
 def max_num(a, b):
@@ -97,7 +100,10 @@ def max_num(a, b):
     >>> type(max_num(4, 4))
     <class 'int'>
     '''
-
+    if a > b:
+        return a
+    else:
+        return b
 
 def max_num_4(a, b, c, d):
     '''
@@ -117,6 +123,15 @@ def max_num_4(a, b, c, d):
     >>> max_num_4(10,1,2,3)
     10
     '''
+    if a > b and a > c and a > d:
+        return a
+    elif b > a and b > c and b > d:
+        return b
+    elif c > a and c > b and c > d:
+        return c
+    else:
+        return d
+    
 
 
 def max_num_abs(a, b):
